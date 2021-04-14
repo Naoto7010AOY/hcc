@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>Web</title>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<style>
+section {
+	display: flex;
+	flex-flow: row wrap;
+}
+section > div {
+	width: calc( 20% - 6px );
+	min-width:300px;
+	height: 15vh;
+	min-height:180px;
+	border:1px dotted #ccc;
+	box-sizing:border-box;
+	padding:0.5em 1em;
+	margin:2px;
+	white-space: nowrap;
+	position:relative;
+}
+section > div > *{
+	text-overflow: ellipsis;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.num, .ent {
+	position: absolute;
+	top: 0.5rem;
+	left: 1rem;
+	background: #fff;
+	font-size: 200%;
+	font-weight: bold;
+	width:3em;
+}
+.num.pass {
+	color: #f00;
+}
+.copy{
+	font-size: 150%;
+	margin-top:3rem;
+}
+.adv,.type,.media,.url{
+	font-size:85%;
+}
+.type {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+}
+.media {
+	position: absolute;
+	bottom: 0.5rem;
+	right: 1rem;
+}
+.link {
+	border: 1px #fff solid;
+	box-shadow:0 0 5px #fff inset;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	transition: all 0.5s;
+}
+.link:hover {
+	border: 1px #09c solid;
+	box-shadow:0 0 5px #09c inset;
+	transition: all 0.25s;
+}
+</style>
+</head>
+<body>
+<section></section>
+</body>
+<script type="text/javascript" src="load_json.js"></script>
+</html>
